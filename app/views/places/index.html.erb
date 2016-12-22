@@ -1,4 +1,4 @@
-<body class="background_blur">
+<body class="background_bw">
   <%= render 'layouts/header' %>
     <input id="pac-input" class="controls" type="text"
         placeholder="Enter a location">
@@ -8,6 +8,7 @@
 <p id="notice"><%= notice %></p>
 
 <br>
+
 
 <%= form_for :place, method: 'create', url: {action: "create"} do |f| %>
 <%= label(:place, :name) %><br>
@@ -21,6 +22,9 @@
 <br>
 <%= f.submit "Save This Place" %>
 <% end %>
+
+
+
 <h1>Your Recommendations</h1>
 
 <table>
@@ -48,7 +52,7 @@
   </tbody>
 </table>
 
-<br>
+
 
 
 <%= render 'layouts/footer' %>
